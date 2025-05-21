@@ -1,3 +1,54 @@
+DECLARE
+    v_count NUMBER;
+BEGIN
+    -- Eliminar triggers primero
+    BEGIN
+        EXECUTE IMMEDIATE 'DROP TRIGGER fechaCreacion';
+        DBMS_OUTPUT.PUT_LINE('Trigger fechaCreacion eliminado');
+    EXCEPTION
+        WHEN OTHERS THEN
+            DBMS_OUTPUT.PUT_LINE('Error eliminando trigger fechaCreacion: ' || SQLERRM);
+    END;
+    
+    BEGIN
+        EXECUTE IMMEDIATE 'DROP TRIGGER actualizadorNum';
+        DBMS_OUTPUT.PUT_LINE('Trigger actualizadorNum eliminado');
+    EXCEPTION
+        WHEN OTHERS THEN
+            DBMS_OUTPUT.PUT_LINE('Error eliminando trigger actualizadorNum: ' || SQLERRM);
+    END;
+
+    -- Eliminar tablas en orden inverso a su creación (por dependencias de FK)
+    BEGIN
+        EXECUTE IMMEDIATE 'DROP TABLE planes CASCADE CONSTRAINTS';
+        DBMS_OUTPUT.PUT_LINE('Tabla planes eliminada');
+    EXCEPTION
+        WHEN OTHERS THEN
+            DBMS_OUTPUT.PUT_LINE('Error eliminando tabla planes: ' || SQLERRM);
+    END;
+    
+    BEGIN
+        EXECUTE IMMEDIATE 'DROP TABLE plataformas CASCADE CONSTRAINTS';
+        DBMS_OUTPUT.PUT_LINE('Tabla plataformas eliminada');
+    EXCEPTION
+        WHEN OTHERS THEN
+            DBMS_OUTPUT.PUT_LINE('Error eliminando tabla plataformas: ' || SQLERRM);
+    END;
+    
+    BEGIN
+        EXECUTE IMMEDIATE 'DROP TABLE categorias CASCADE CONSTRAINTS';
+        DBMS_OUTPUT.PUT_LINE('Tabla categorias eliminada');
+    EXCEPTION
+        WHEN OTHERS THEN
+            DBMS_OUTPUT.PUT_LINE('Error eliminando tabla categorias: ' || SQLERRM);
+    END;
+    DBMS_OUTPUT.PUT_LINE('Eliminación de objetos completada');
+EXCEPTION
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Error general: ' || SQLERRM);
+END;
+/
+
 -- Tabla Categorías
 CREATE TABLE categorias (
     id_categoria NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
