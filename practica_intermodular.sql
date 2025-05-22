@@ -85,7 +85,7 @@ INSERT INTO plataformas (id_categoria, nombre, descripcion, fundadores, sitio_we
 (4, 'Brawl Stars', 'Juego movil de Supercell', 'Supercell', 'https://supercell.com/en/games/brawlstars/'),
 (5, 'Kindle', 'Plataforma de libros electronicos de Amazon', 'Amazon', 'https://www.amazon.com/kindle');
 
--- Inserci�n de planes para las plataformas existentes
+-- Insercion de planes para las plataformas existentes
 INSERT INTO planes (id_plataforma, nombre_plan, precio, dispositivos_maximos) VALUES
 
 -- Netflix
