@@ -4,13 +4,13 @@ package com.pablo.proyecto.intermodular;
 public class Plan {
     
     // Atributos
-    private String id_plataforma;
+    private int id_plataforma;
     private String nombre_plan;
     private double precio;
     private int dispositivos_maximos;
     
     // Constructor
-    public Plan(String idP, String np, double p, int dm){
+    public Plan(int idP, String np, double p, int dm){
         this.id_plataforma = idP;
         this.nombre_plan = np;
         this.precio = p;
@@ -19,7 +19,7 @@ public class Plan {
     }
     
     // Getters
-    public String getId_plataforma() {
+    public int getId_plataforma() {
         return this.id_plataforma;
     }
 
@@ -36,7 +36,7 @@ public class Plan {
     }
     
     // Setters
-    public void setId_plataforma(String id_plataforma) {
+    public void setId_plataforma(int id_plataforma) {
         this.id_plataforma = id_plataforma;
     }
 
