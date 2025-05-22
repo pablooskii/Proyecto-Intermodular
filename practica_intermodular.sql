@@ -69,8 +69,8 @@ DELIMITER ;
 
 -- Insercion de datos en Categorias
 INSERT INTO categorias (nombre, descripcion) VALUES
-('Streaming', 'Plataformas de transmisi�n de video'),
-('M�sica', 'Plataformas de transmisi�n de m�sica'),
+('Streaming', 'Plataformas de transmision de video'),
+('Musica', 'Plataformas de transmision de musica'),
 ('Entretenimiento', 'Plataformas de contenido variado'),
 ('Juegos', 'Plataformas de videojuegos'),
 ('Lectura', 'Plataformas de libros y lectura digital');
@@ -78,19 +78,19 @@ INSERT INTO categorias (nombre, descripcion) VALUES
 -- Insercion de datos en Plataformas
 INSERT INTO plataformas (id_categoria, nombre, descripcion, fundadores, sitio_web) VALUES
 (1, 'Netflix', 'Plataforma de streaming de pel�culas y series', 'Reed Hastings, Marc Randolph', 'https://www.netflix.com'),
-(1, 'Disney+', 'Plataforma de streaming de Disney, Pixar, Marvel y m�s', 'The Walt Disney Company', 'https://www.disneyplus.com'),
-(2, 'Spotify', 'Plataforma de streaming de m�sica', 'Daniel Ek, Martin Lorentzon', 'https://www.spotify.com'),
-(2, 'Apple Music', 'Servicio de streaming de m�sica de Apple', 'Apple Inc.', 'https://music.apple.com'),
-(3, 'YouTube', 'Plataforma de videos en l�nea', 'Steve Chen, Chad Hurley, Jawed Karim', 'https://www.youtube.com'),
-(4, 'Brawl Stars', 'Juego m�vil de Supercell', 'Supercell', 'https://supercell.com/en/games/brawlstars/'),
-(5, 'Kindle', 'Plataforma de libros electr�nicos de Amazon', 'Amazon', 'https://www.amazon.com/kindle');
+(1, 'Disney+', 'Plataforma de streaming de Disney, Pixar, Marvel y mas', 'The Walt Disney Company', 'https://www.disneyplus.com'),
+(2, 'Spotify', 'Plataforma de streaming de musica', 'Daniel Ek, Martin Lorentzon', 'https://www.spotify.com'),
+(2, 'Apple Music', 'Servicio de streaming de musica de Apple', 'Apple Inc.', 'https://music.apple.com'),
+(3, 'YouTube', 'Plataforma de videos en linea', 'Steve Chen, Chad Hurley, Jawed Karim', 'https://www.youtube.com'),
+(4, 'Brawl Stars', 'Juego movil de Supercell', 'Supercell', 'https://supercell.com/en/games/brawlstars/'),
+(5, 'Kindle', 'Plataforma de libros electronicos de Amazon', 'Amazon', 'https://www.amazon.com/kindle');
 
 -- Inserci�n de planes para las plataformas existentes
 INSERT INTO planes (id_plataforma, nombre_plan, precio, dispositivos_maximos) VALUES
 
 -- Netflix
-(1, 'Netflix B�sico', 7.99, 1),
-(1, 'Netflix Est�ndar', 12.99, 2),
+(1, 'Netflix Basico', 7.99, 1),
+(1, 'Netflix Estandar', 12.99, 2),
 (1, 'Netflix Premium', 17.99, 4),
 -- Disney+
 (1, 'Disney+ Estandar', 8.99, 2),
