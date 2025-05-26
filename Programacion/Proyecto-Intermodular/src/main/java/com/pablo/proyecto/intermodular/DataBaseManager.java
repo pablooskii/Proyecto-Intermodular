@@ -36,8 +36,8 @@ public class DataBaseManager {
                 int numPlataformas = rs.getInt("num_plataformas");
 
                 System.out.println("ID: " + id + ", Nombre: " + nombre +
-                                   ", Descripcion: " + descripcion +
-                                   ", Num Plataformas: " + numPlataformas);
+                                                ", Descripcion: " + descripcion +
+                                                ", Num Plataformas: " + numPlataformas);
             }
 
         } 
